@@ -1,0 +1,19 @@
+{
+  "name": "healstack",
+  "version": "1.0.0",
+  "description": "AI Self-Healing SDK for modern applications",
+  "main": "src/index.js",
+  "keywords": [
+    "ai",
+    "monitoring",
+    "self-healing",
+    "observability",
+    "sdk",
+    "recovery"
+  ],
+  "author": "Dhanush Reddy",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
