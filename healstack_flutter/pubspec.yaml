@@ -1,7 +1,9 @@
 name: healstack_flutter
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: A lightweight, robust mobile SDK for HealStack to capture crashes, track API failures with automatic Dio interceptor retries, and stream logs to the backend dashboard.
+version: 1.0.0
+homepage: https://github.com/bsaidhanush/healstack
+repository: https://github.com/bsaidhanush/healstack/tree/main/healstack_flutter
+issue_tracker: https://github.com/bsaidhanush/healstack/issues
 
 environment:
   sdk: ^3.11.3
