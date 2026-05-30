@@ -27,6 +27,27 @@ See `docs/architecture.md` for the full system design.
 npm install healstack
 ```
 
+## Beta Release (Public)
+
+HealStack Beta is now published to the npm registry as `healstack@1.0.0` and is publicly installable. For a quick verification, run:
+
+```bash
+npm install healstack
+```
+
+Basic usage:
+
+```javascript
+import HealStack from "healstack";
+
+HealStack.init({
+  apiKey: "demo-key",
+  autoHeal: true
+});
+```
+
+See the release notes for Beta in `docs/release-notes-beta.md` for details and how to report issues.
+
 ## Quick Start
 
 ```javascript
@@ -34,6 +55,46 @@ import HealStack from "healstack";
 
 HealStack.init({
   apiKey: "demo-key"
+});
+```
+
+## SDK Usage
+
+### Installation
+
+```bash
+npm install healstack
+```
+
+### TypeScript Support
+
+HealStack is now built with full TypeScript support. Type definitions are included out of the box.
+
+```typescript
+import HealStack from "healstack";
+
+HealStack.init({
+  apiKey: "demo-key",
+  autoHeal: true
+});
+```
+
+### Core Capabilities
+
+- **Auto-Healing**: Automatically recover from common errors
+- **Error Tracking**: Monitor frontend errors and API failures
+- **Smart Retry**: Exponential backoff retry strategies
+- **Fallback APIs**: Switch to backup endpoints on failure
+- **Real-time Diagnostics**: AI-powered error analysis
+
+### Configuration
+
+```typescript
+HealStack.init({
+  apiKey: "your-api-key",
+  autoHeal: true,           // Enable automatic recovery
+  debug: false,             // Enable debug logging
+  environment: "production" // Set environment
 });
 ```
 

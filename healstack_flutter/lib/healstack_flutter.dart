@@ -15,15 +15,23 @@ class HealStack {
     required String apiKey,
     required String apiUrl,
   }) {
+    WidgetsFlutterBinding.ensureInitialized();
 
     HealStack.apiKey = apiKey;
     HealStack.apiUrl = apiUrl;
 
+    // Capture standard Flutter framework errors (build, layout, etc.)
     FlutterError.onError = (FlutterErrorDetails details) {
-
+      FlutterError.presentError(details);
       captureError(
         details.exceptionAsString(),
       );
+    };
+
+    // Capture uncaught asynchronous & button callback errors
+    WidgetsBinding.instance.platformDispatcher.onError = (Object error, StackTrace stack) {
+      captureError(error.toString());
+      return false; // Let the platform print the error to console as well
     };
 
     debugPrint("HealStack Initialized");
